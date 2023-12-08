@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="/admin">Adiministrador</a>
+    <a href="/cadastro">Cadastro</a>
+
+    <br>
+    <br>
+    <form method="post" action="/salvadados">
+      <label for="nome">Nome:</label>
+      <input
+        type="text"
+        name="nome"
+        class="input"
+        required
+        placeholder="Digite seu nome"
+      />
+      <label for="sobrenome">Sobrenome:</label>
+      <input
+        type="text"
+        name="sobrenome"
+        class="input"
+        required
+        placeholder="Digite seu sobrenome"
+      />
+      <label for="endereco">Endereço:</label>
+      <input
+        type="text"
+        name="endereco"
+        class="input"
+        required
+        placeholder="Digite seu endereço"
+      />
+      <label for="estado">Estado:</label>
+      <input
+        type="text"
+        name="estado"
+        class="input"
+        required
+        placeholder="Digite seu estado"
+      />
+      <button id="botão-enviar" type="submit">Enviar dados</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Sobrenome</th>
+          <th>Endereço</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% usuarios.forEach(function(usuario) { %>
+        <tr>
+          <td><%= usuario.id %></td>
+          <td><%= usuario.nome %></td>
+          <td><%= usuario.sobrenome %></td>
+          <td><%= usuario.endereco %></td>
+          <td><%= usuario.estado %></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>

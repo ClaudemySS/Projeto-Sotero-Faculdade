@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="/atualizar">
+        <label for="nome">Nome:</label>
+        <input
+          type="text"
+          name="nome"
+          class="input"
+          required
+          value="<%= atualizar.nome %>"
+          placeholder="Digite seu nome"
+        />
+        <label for="sobrenome">Sobrenome:</label>
+        <input
+          type="text"
+          name="sobrenome"
+          class="input"
+          required
+          value="<%= atualizar.sobrenome %>"
+          placeholder="Digite seu sobrenome"
+        />
+        <label for="endereco">Endereço:</label>
+        <input
+          type="text"
+          name="endereco"
+          class="input"
+          required
+          value="<%= atualizar.endereco %>"
+          placeholder="Digite seu endereço"
+        />
+        <label for="estado">Estado:</label>
+        <input
+          type="text"
+          name="estado"
+          class="input"
+          required
+          value="<%= atualizar.estado %>"
+          placeholder="Digite seu estado"
+        />
+
+        <input
+        type="hidden"
+        name="id"
+        class="input"
+        required
+        value="<%= atualizar.id %>"
+        placeholder="Digite seu estado"
+      />
+        <button id="botão-enviar" type="submit">Atualizar</button>
+        <a href="/admin"><button id="botão-enviar" type="button">Voltar</button></a>
+      </form>
+</body>
+</html>
